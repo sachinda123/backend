@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20.28% </span>
+                <span class="strong">36.23% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/69</span>
+                <span class='fraction'>25/69</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>3/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">20% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>1/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20.28% </span>
+                <span class="strong">36.23% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/69</span>
+                <span class='fraction'>25/69</span>
             </div>
         
             
@@ -207,19 +207,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -326,22 +326,22 @@ router.get("/list/:offset/:limit", validateRequest("get-all", "customer"), <span
 <span class="cstat-no" title="statement not covered" >        return sendResponse(res, 500, { code: "SERVER_ERROR", reason: `${errormsg}` }, true);</span>
     }
 });
-router.post("/create/", validateRequest("post-create", "customer"), <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-        const { error } = <span class="cstat-no" title="statement not covered" >customerSchema.validate(req.body);</span>
-<span class="cstat-no" title="statement not covered" >        if (error) {</span>
-<span class="cstat-no" title="statement not covered" >            return sendResponse(res, 400, error.details[0].message, true);</span>
+router.post("/create/", validateRequest("post-create", "customer"), async (req, res) =&gt; {
+    try {
+        const { error } = customerSchema.validate(req.body);
+        if (error) {
+            return sendResponse(res, 400, error.details[0].message, true);
         }
         else {
-            const data = <span class="cstat-no" title="statement not covered" >req.body;</span>
-            const exist = <span class="cstat-no" title="statement not covered" >await checkExist({ where: { [Op.and]: [{ firstName: data.firstName }, { lastName: data.lastName }] } }, Customer);</span>
-<span class="cstat-no" title="statement not covered" >            if (!exist) {</span>
-<span class="cstat-no" title="statement not covered" >                data.active = 1;</span>
-<span class="cstat-no" title="statement not covered" >                data.addedBy = req.user.id;</span>
-                const created = <span class="cstat-no" title="statement not covered" >await create(data, Customer);</span>
-<span class="cstat-no" title="statement not covered" >                return sendResponse(res, 200, created, true);</span>
+            const data = req.body;
+            const exist = await checkExist({ where: { [Op.and]: [{ firstName: data.firstName }, { lastName: data.lastName }] } }, Customer);
+            if (!exist) {
+                data.active = 1;
+                data.addedBy = req.user.id;
+                const created = await create(data, Customer);
+                return sendResponse(res, 200, created, true);
             }
-            else {
+            else <span class="missing-if-branch" title="else path not taken" >E</span>{
 <span class="cstat-no" title="statement not covered" >                return sendResponse(res, 400, `Name exist on ID:-${exist.id}`, true);</span>
             }
         }
@@ -430,7 +430,7 @@ module.exports = router;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-05-19T07:34:37.721Z
+                at 2024-05-19T08:05:47.428Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

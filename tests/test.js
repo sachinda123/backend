@@ -2,7 +2,9 @@ jest.useRealTimers();
 const chai = require("chai"),
   chaiHttp = require("chai-http");
 const server = require("../dist/index");
-const { Customer, User } = require("../dist/models");
+const {
+  models: { Customer, User },
+} = require("../dist/models");
 const passport = jest.requireActual("passport");
 jest.mock("passport", () => {
   return {
@@ -76,7 +78,7 @@ describe("Test Customer crud", () => {
         addedBy: 2,
       });
     } catch (error) {
-      // console.log("error", error);
+      console.log("error", error);
     }
   });
   it("test insert customer data with out first name key", async () => {
@@ -103,7 +105,7 @@ describe("Test Customer crud", () => {
 
       expect(res.statusCode).toEqual(400);
     } catch (error) {
-      // console.log("error", error);
+      console.log("error", error);
     }
   });
   it("test insert customer data with out last name key", async () => {
@@ -130,7 +132,7 @@ describe("Test Customer crud", () => {
 
       expect(res.statusCode).toEqual(400);
     } catch (error) {
-      // console.log("error", error);
+      console.log("error", error);
     }
   });
 });
@@ -152,7 +154,7 @@ describe("Test user login", () => {
       });
       expect(res.statusCode).toEqual(200);
     } catch (error) {
-      // console.log("error", error);
+      console.log("error", error);
     }
   });
 });
