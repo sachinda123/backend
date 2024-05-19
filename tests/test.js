@@ -1,8 +1,8 @@
 jest.useRealTimers();
 const chai = require("chai"),
   chaiHttp = require("chai-http");
-const server = require("../index");
-const { Customer, User } = require("../models");
+const server = require("../dist/index");
+const { Customer, User } = require("../dist/models");
 const passport = jest.requireActual("passport");
 jest.mock("passport", () => {
   return {
@@ -14,7 +14,7 @@ jest.mock("passport", () => {
     }),
   };
 });
-jest.mock("../functions/common", () => {
+jest.mock("../dist/functions/common", () => {
   return {
     validateRequest: (permission, controller) => {
       var middleware = async (req, res, next) => {
