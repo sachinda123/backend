@@ -25,6 +25,7 @@ Note:
 - All documents are located in the `document` folder, including the answer sheet and Postman collection.
 - Not all functions are covered by test cases; only samples are done.
 - User passwords are stored as plain text for testing purposes.
+- we will able to add process manages Pm2 Node mon but in this phase not added
 
 You can use the following credentials to log in:
 
