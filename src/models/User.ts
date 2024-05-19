@@ -1,6 +1,4 @@
 import { Model, DataTypes, Sequelize } from "sequelize";
-// import { Role } from "./Role"; // Assuming you have a Role model defined
-
 interface UserAttributes {
   id: number;
   firstName: string | null;
@@ -17,20 +15,7 @@ class User extends Model<UserAttributes> implements UserAttributes {
   public userName!: string | null;
   public password!: string | null;
   public RoleId!: number | null;
-
-  public readonly createdAt!: Date;
-  public readonly updatedAt!: Date;
-
-  // If you have associations defined, you can define them here
-  // public readonly role?: Role;
-
-  // Here you can define class level methods
-
-  // Here you can define associations
-
-  static associate(models: any) {
-    // User.belongsTo(models.Role, { foreignKey: "RoleId" });
-  }
+  static associate(models: any) {}
 }
 
 export default (sequelize: Sequelize) => {

@@ -9,11 +9,11 @@ const User_1 = __importDefault(require("./User"));
 const Customer_1 = __importDefault(require("./Customer"));
 const Role_1 = __importDefault(require("./Role"));
 const Medication_1 = __importDefault(require("./Medication"));
-const sequelize = new sequelize_1.Sequelize("wire", "root", "root", {
-    username: "root",
-    password: "root",
-    database: "wire",
-    host: "api-mysql",
+const sequelize = new sequelize_1.Sequelize(process.env.MYSQL_DB || "wire", process.env.MYSQL_USER || "root", process.env.MYSQL_USER_PASSWORD || "root", {
+    username: process.env.MYSQL_USER || "root",
+    password: process.env.MYSQL_USER_PASSWORD || "root",
+    database: process.env.MYSQL_DB || "wire",
+    host: process.env.MYSQL_DB_HOST || "api-mysql",
     dialect: "mysql",
     logging: false,
 });

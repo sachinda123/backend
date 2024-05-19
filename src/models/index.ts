@@ -4,11 +4,11 @@ import Customer from "./Customer";
 import Role from "./Role";
 import Medication from "./Medication";
 
-const sequelize = new Sequelize("wire", "root", "root", {
-  username: "root",
-  password: "root",
-  database: "wire",
-  host: "api-mysql",
+const sequelize = new Sequelize(process.env.MYSQL_DB || "wire", process.env.MYSQL_USER || "root", process.env.MYSQL_USER_PASSWORD || "root", {
+  username: process.env.MYSQL_USER || "root",
+  password: process.env.MYSQL_USER_PASSWORD || "root",
+  database: process.env.MYSQL_DB || "wire",
+  host: process.env.MYSQL_DB_HOST || "api-mysql",
   dialect: "mysql",
   logging: false,
 });

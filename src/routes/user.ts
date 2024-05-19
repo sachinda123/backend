@@ -11,7 +11,6 @@ import { Request, Response } from "express";
 router.get("/list/:offset/:limit", validateRequest("get-all", "user"), async (req: Request, res: Response) => {
   try {
     const { offset, limit } = req.params;
-
     const list = await getAll(User, Number(offset), Number(limit));
     return sendResponse(res, 200, list, true);
   } catch (error) {
