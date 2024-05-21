@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716105948035" clover="3.2.0">
-  <project timestamp="1716105948036" name="All files">
-    <metrics statements="267" coveredstatements="127" conditionals="73" coveredconditionals="25" methods="30" coveredmethods="16" elements="370" coveredelements="168" complexity="0" loc="267" ncloc="267" packages="4" files="12" classes="12"/>
+<coverage generated="1716281429499" clover="3.2.0">
+  <project timestamp="1716281429499" name="All files">
+    <metrics statements="265" coveredstatements="127" conditionals="71" coveredconditionals="25" methods="30" coveredmethods="16" elements="366" coveredelements="168" complexity="0" loc="265" ncloc="265" packages="4" files="12" classes="12"/>
     <package name="dist">
-      <metrics statements="27" coveredstatements="18" conditionals="6" coveredconditionals="1" methods="2" coveredmethods="1"/>
-      <file name="index.js" path="/home/app/dist/index.js">
-        <metrics statements="27" coveredstatements="18" conditionals="6" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <metrics statements="25" coveredstatements="18" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <file name="index.js" path="/private/var/projects/vegofy/node-typescript/dist/index.js">
+        <metrics statements="25" coveredstatements="18" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -17,27 +17,25 @@
         <line num="10" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="46" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="45" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="46" count="1" type="stmt"/>
         <line num="47" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
       </file>
     </package>
     <package name="dist.functions">
       <metrics statements="30" coveredstatements="11" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="2"/>
-      <file name="modelFunctions.js" path="/home/app/dist/functions/modelFunctions.js">
+      <file name="modelFunctions.js" path="/private/var/projects/vegofy/node-typescript/dist/functions/modelFunctions.js">
         <metrics statements="26" coveredstatements="7" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -66,7 +64,7 @@
         <line num="56" count="1" type="stmt"/>
         <line num="57" count="1" type="stmt"/>
       </file>
-      <file name="schema.js" path="/home/app/dist/functions/schema.js">
+      <file name="schema.js" path="/private/var/projects/vegofy/node-typescript/dist/functions/schema.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -76,7 +74,7 @@
     </package>
     <package name="dist.models">
       <metrics statements="35" coveredstatements="35" conditionals="21" coveredconditionals="20" methods="11" coveredmethods="11"/>
-      <file name="Customer.js" path="/home/app/dist/models/Customer.js">
+      <file name="Customer.js" path="/private/var/projects/vegofy/node-typescript/dist/models/Customer.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -84,7 +82,7 @@
         <line num="8" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
       </file>
-      <file name="Medication.js" path="/home/app/dist/models/Medication.js">
+      <file name="Medication.js" path="/private/var/projects/vegofy/node-typescript/dist/models/Medication.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -92,7 +90,7 @@
         <line num="8" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
       </file>
-      <file name="Role.js" path="/home/app/dist/models/Role.js">
+      <file name="Role.js" path="/private/var/projects/vegofy/node-typescript/dist/models/Role.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -100,7 +98,7 @@
         <line num="8" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
       </file>
-      <file name="User.js" path="/home/app/dist/models/User.js">
+      <file name="User.js" path="/private/var/projects/vegofy/node-typescript/dist/models/User.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -108,7 +106,7 @@
         <line num="8" count="1" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
       </file>
-      <file name="index.js" path="/home/app/dist/models/index.js">
+      <file name="index.js" path="/private/var/projects/vegofy/node-typescript/dist/models/index.js">
         <metrics statements="15" coveredstatements="15" conditionals="21" coveredconditionals="20" methods="3" coveredmethods="3"/>
         <line num="2" count="1" type="cond" truecount="3" falsecount="0"/>
         <line num="3" count="4" type="cond" truecount="3" falsecount="1"/>
@@ -129,7 +127,7 @@
     </package>
     <package name="dist.routes">
       <metrics statements="175" coveredstatements="63" conditionals="42" coveredconditionals="4" methods="12" coveredmethods="2"/>
-      <file name="customer.js" path="/home/app/dist/routes/customer.js">
+      <file name="customer.js" path="/private/var/projects/vegofy/node-typescript/dist/routes/customer.js">
         <metrics statements="69" coveredstatements="25" conditionals="18" coveredconditionals="3" methods="5" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -201,7 +199,7 @@
         <line num="117" count="0" type="stmt"/>
         <line num="120" count="1" type="stmt"/>
       </file>
-      <file name="login.js" path="/home/app/dist/routes/login.js">
+      <file name="login.js" path="/private/var/projects/vegofy/node-typescript/dist/routes/login.js">
         <metrics statements="21" coveredstatements="16" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -225,7 +223,7 @@
         <line num="27" count="0" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
       </file>
-      <file name="medication.js" path="/home/app/dist/routes/medication.js">
+      <file name="medication.js" path="/private/var/projects/vegofy/node-typescript/dist/routes/medication.js">
         <metrics statements="69" coveredstatements="14" conditionals="18" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -297,7 +295,7 @@
         <line num="116" count="0" type="stmt"/>
         <line num="119" count="1" type="stmt"/>
       </file>
-      <file name="user.js" path="/home/app/dist/routes/user.js">
+      <file name="user.js" path="/private/var/projects/vegofy/node-typescript/dist/routes/user.js">
         <metrics statements="16" coveredstatements="8" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
